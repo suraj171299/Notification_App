@@ -10,3 +10,10 @@ jspm_packages/
 .env
 .env.test
 .env.production
+
+# prettier
+.prettierrc
+.prettierignore
+
+#logging 
+/app.log
