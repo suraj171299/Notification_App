@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import logger from "./utils/logger.js";
 import morgan from "morgan";
+import userRouter from "./routes/user.routes.js"
+import { errorHandler } from './middlewares/error.middlewares.js';
 
 const app = express()
 
@@ -34,6 +36,11 @@ app.use(
 )
 
 
+//User Routes
+app.use("/api/v1/users", userRouter)
 
 
+
+
+app.use(errorHandler)
 export { app }
